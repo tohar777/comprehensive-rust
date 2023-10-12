@@ -16,6 +16,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Install YAPF
+        run: |
+          sudo apt install yapf3
+
       - name: Install nightly rustfmt
         run: |
           rustup default nightly
